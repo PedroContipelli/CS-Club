@@ -1,0 +1,2 @@
+# CS-Club
+Educational Purposes
