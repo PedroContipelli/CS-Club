@@ -4,16 +4,13 @@ public class Kruskals {
 static int[] parent;
 
 public static int find(int n) {
-	return parent[n] == n ? n : (parent[n] = find(parent[n]));
+	return parent[n] == n ? n : ( parent[n] = find(parent[n]) );
 	
 	/*
 	 * if (parent[n] == n)
 	 * 		return n;
 	 * else
-	 * 		{
-	 * 		parent[n] = find(parent[n]);
-	 * 		return parent[n];
-	 * 		}
+	 * 		return find(parent[n]);
 	 */
 }
 
