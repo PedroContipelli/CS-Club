@@ -4,12 +4,12 @@ public class staircase {
 static HashMap<Integer , HashSet<Integer>> graph = new HashMap<>();
 static HashSet<Integer> visited = new HashSet<>();
 
-public static void BFS(int current) {
+public static void DFS(int current) {
 	for (int check : graph.get(current))
 		if (!visited.contains(check))
 			{
 			visited.add(check);
-			BFS(check);
+			DFS(check);
 			}
 }
 
@@ -43,7 +43,7 @@ for (int z = 1; z <= T; z++)
 		}
 	
 	visited.add(0);
-	BFS(0);
+	DFS(0);
 	
 	System.out.print("Staircase #" + z + ": ");
 	System.out.println(visited.contains(end) ? "Possible" : "Impossible");
